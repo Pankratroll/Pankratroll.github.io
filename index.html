@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <script src="script.js"></script>
+   <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="wrapper">
+        <div class="one">  <label for="cpuprice">Processzor Ár:</label>
+            <input type="number" id="cpu" name="item"></div>
+        <div class="two">Netto: <div id="cpuafa"> 0</div> Brutto: <div id="cpuwafa"> 0</div></div>
+
+        <div class="three">   <label for="mobprice">Alaplap Ár:</label>
+            <input type="number" id="mob" name="item"></div>
+        <div class="four">Netto: <div id="mobafa"> 0</div> Brutto: <div id="mobwafa"> 0</div></div>
+
+        <div class="five">    <label for="ramprice">Ram Ár:</label>
+            <input type="number" id="ram" name="item">    </div>
+        <div class="six">Netto: <div id="ramafa"> 0</div> Brutto: <div id="ramwafa"> 0</div></div>
+
+        <div class="seven">    <label for="psuprice">Táp Ár:</label>
+            <input type="number" id="psu" name="item">    </div>
+        <div class="eight">Netto: <div id="psuafa"> 0</div> Brutto: <div id="psuwafa"> 0</div></div>
+
+        <div class="nine">    <label for="casprice">Ház Ár:</label>
+                <input type="number" id="cas" name="item">     </div> 
+        <div class="ten">Netto: <div id="casafa"> 0</div> Brutto: <div id="caswafa"> 0</div></div>
+
+        <div class="eleven">    <label for="ssdprice">SSD Ár:</label>
+            <input type="number" id="ssd" name="item">     </div>
+        <div class="twelve">Netto: <div id="ssdafa"> 0</div> Brutto: <div id="ssdwafa"> 0</div></div>
+
+        <div class="thirteen"> Összeszámolt összeg: <div id="fullprice"></div> Netto: <div id="fullafa"></div> Brutto: <div id="fullwafa"></div>  </div>
+     
+        <div class="fifteen">    <label for="colprice">Hűtő Ár:</label>
+            <input type="number" id="col" name="item">     </div> 
+    <div class="sixteen">Netto: <div id="colafa"> 0</div> Brutto: <div id="colwafa"> 0</div></div>
+
+        <div class="seventeen">    <label for="hddprice">HDD Ár:</label>
+            <input type="number" id="hdd" name="item">     </div> 
+    <div class="eightteen">Netto: <div id="hddafa"> 0</div> Brutto: <div id="hddwafa"> 0</div></div>
+
+        <div class="nineteen">    <label for="hdsprice">2. HDD Ár:</label>
+            <input type="number" id="hds" name="item">     </div> 
+    <div class="twenty">Netto: <div id="hdsafa"> 0</div> Brutto: <div id="hdswafa"> 0</div></div>
+
+        <div class="twentyone">    <label for="sdsprice">VGA  Ár:</label>
+            <input type="number" id="sds" name="item">     </div> 
+    <div class="twentytwo">Netto: <div id="sdsafa"> 0</div> Brutto: <div id="sdswafa"> 0</div></div>
+
+        <div class="twentythree">    <label for="hhhprice">HázHűtés Ár:</label>
+            <input type="number" id="hhh" name="item">     </div> 
+    <div class="twentyfour">Netto: <div id="hhhafa"> 0</div> Brutto: <div id="hhhwafa"> 0</div></div>
+
+        <div class="twentyfive">    <label for="anyprice">Profit:</label>
+            <input type="number" id="any" name="item">     </div> 
+    <div class="twentysix">Netto: <div id="anyafa"> 0</div> Brutto: <div id="anywafa"> 0</div></div>
+
+<button onclick="document.getElementsByName('item').value = ''"></button>
+    </div>
+</body>
+</html>

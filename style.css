@@ -1,0 +1,150 @@
+.thirteen {
+    border-style: solid;
+    padding: 10px;
+    line-height: 30px;
+}
+#fullafa, #fullwafa, #fullprice{
+    text-align: center;
+    background-color: rgba(226, 123, 163, 0.247);
+}
+input {
+    font-size:24px;
+    display: block;
+    width: 50%;
+    margin-left: 25%;
+}
+
+.wrapper {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 10px;
+    grid-auto-rows: minmax(20px, auto);
+    font-size: 18px;
+    text-align: center;
+  }
+  .one {
+    background-color: rgba(205, 216, 216, 0.164);
+    grid-column: 1;
+    grid-row: 1;
+  }
+  .two {
+    grid-column: 2 / 2;
+    grid-row: 1 / 2;
+  }
+  .three {
+    background-color: rgba(205, 216, 216, 0.164);
+    grid-column: 1;
+    grid-row: 3;
+  }
+  .four {
+    background-color: rgba(87, 122, 199, 0.116);
+    grid-column: 2;
+    grid-row: 3;
+  }
+  .five {
+    background-color: rgba(205, 216, 216, 0.164);
+    grid-column: 1;
+    grid-row: 5;
+}
+.six {
+    grid-column: 2;
+    grid-row: 5;
+}
+.seven {
+    background-color: rgba(205, 216, 216, 0.164);
+    grid-column: 1;
+    grid-row: 7;
+}
+.eight {
+    background-color: rgba(87, 122, 199, 0.116);
+    grid-column: 2;
+    grid-row: 7;
+}
+.nine {
+    background-color: rgba(205, 216, 216, 0.164);
+    grid-column: 1;
+    grid-row: 9;
+}
+.ten {
+    grid-column: 2;
+    grid-row: 9;
+}
+.eleven {
+    background-color: rgba(205, 216, 216, 0.164);
+    grid-column: 3;
+    grid-row: 1;
+}
+.twelve {
+    grid-column: 4;
+    grid-row: 1;
+}
+.fifteen {
+    background-color: rgba(205, 216, 216, 0.164);
+    grid-column: 3;
+    grid-row: 3;
+}
+.sixteen {
+    background-color: rgba(87, 122, 199, 0.116);
+    grid-column: 4;
+    grid-row: 3;
+}
+.seventeen {
+    background-color: rgba(205, 216, 216, 0.164);
+    grid-column: 3;
+    grid-row: 5;
+}
+.eightteen {
+    grid-column: 4;
+    grid-row: 5;
+}
+.nineteen {
+    background-color: rgba(205, 216, 216, 0.164);
+    grid-column: 3;
+    grid-row: 7;
+}
+.twenty {
+    background-color: rgba(87, 122, 199, 0.116);;
+    grid-column: 4;
+    grid-row: 7;
+}
+.twentyone {
+    background-color: rgba(205, 216, 216, 0.164);
+    grid-column: 3;
+    grid-row: 9;
+}
+.twentytwo {
+    grid-column: 4;
+    grid-row: 9;
+}
+.twentythree {
+    background-color: rgba(205, 216, 216, 0.164);
+    grid-column: 3;
+    grid-row: 10;
+}
+.twentyfour {
+    background-color: rgba(87, 122, 199, 0.116);
+    grid-column: 4;
+    grid-row: 10;
+}
+.twentyfive {
+    background-color: rgba(205, 216, 216, 0.164);
+    grid-column: 3;
+    grid-row: 11;
+}
+.twentysix {
+    grid-column: 4;
+    grid-row: 11;
+}
+
+.thirteen {
+    grid-column: 1;
+    grid-row: 11;
+}
+.fourteen {
+    grid-column: 1;
+    grid-row: 11;
+}
+.fourteen {
+    grid-column: 2;
+    grid-row: 11;
+}
