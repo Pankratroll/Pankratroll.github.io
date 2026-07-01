@@ -1,34 +1,23 @@
+function saveToFile() {
+    // 1. Get values from the inputs
+    const user = document.getElementById('userInput').value;
+    const city = document.getElementById('cityInput').value;
 
-document.addEventListener("click", function(){
-let items = ["cpu", "mob", "ram", "psu", "cas", "ssd", "col", "hdd", "hds", "sds", "hhh", "any"]
+    // 2. Format the data
+    const content = `User Info: ${user}\nCity: ${city}`;
 
-const Akac = (main) => {
-let item = document.getElementById(main)
-let price = item.value
-let afa = Math.round((price / 127 * 100) * 1000) / 1000;
-let wafa = price * 1.27;
-document.getElementById(main + "afa").innerHTML = afa
-document.getElementById(main + "wafa").innerHTML = wafa
-  }
+    // 3. Create a Blob object representing the data
+    const blob = new Blob([content], { type: 'text/plain' });
 
-function Weak() {
-    var arr = document.getElementsByName('item');
-    var fullprice=0;
-    for(var i=0;i<arr.length;i++){
-        if(parseInt(arr[i].value))
-            fullprice += parseInt(arr[i].value);
-    }
-    document.getElementById('fullprice').innerHTML = fullprice;
-    let fullafa = Math.round((fullprice / 127 * 100) * 1000) / 1000;
-    document.getElementById('fullafa').innerHTML = fullafa;
-    let fullwafa = fullprice * 1.27
-    document.getElementById('fullwafa').innerHTML = fullwafa;
+    // 4. Create a link element to trigger the download
+    const link = document.createElement('a');
+    link.href = URL.createObjectURL(blob);
+    link.download = 'data.txt'; // The name of the file
+
+    // 5. Trigger the download
+    document.body.appendChild(link);
+    link.click();
+    
+    // 6. Cleanup
+    document.body.removeChild(link);
 }
-Weak()
-  
-  
-  for (let index = 0; index < items.length; index++) {
-      const element = items[index];
-      Akac(element)
-  }
-});
