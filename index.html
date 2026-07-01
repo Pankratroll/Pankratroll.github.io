@@ -1,60 +1,39 @@
-<!-- OM Namah Shivay -->
-
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="instagram login.css">
-        <title>Instagram Login</title>
-    </head>
-    <body>
-       <div class="wrapper">
-            <!-- Box 1 -->
-            <div class="box1">
-                    <img src="https://static.cdninstagram.com/images/instagram/xig/homepage/phones/home-phones.png?" alt="" class="photo">
-                   
-                    <img src="https://images.pexels.com/photos/2725253/pexels-photo-2725253.jpeg" alt="" class="photo2">
-            </div>            
-            <!-- Box 2 -->
-            <div class="box2">
-                <!-- Loginform -->
-                <div class="loginBox">
-                    <img src="https://static.cdninstagram.com/rsrc.php/v3/yM/r/8n91YnfPq0s.png" alt="logo" class="logo" >
-                    <form action="#" class="form">
-                            <input type="text" class="input" placeholder="Phone number, username or email address">
-                            <input type="password" class="input" placeholder="Password">
-                            <input type="button" class="logbtn" value="Log in"> 
-                    </form>
-                    <div class="division">
-                        <div class="hr"></div>
-                        <p class="or">OR</p>
-                        <div class="hr"></div>
-                    </div>
-                    <div class="logfb">
-                        <div class="logfb__icon"></div>
-                        <a href="#" class="logfb__link">Log in with Facebook</a>
-                    </div>
-                    <a href="#" class="forget-password">Forgotten your password?</a>
-                </div>
-                <!-- signup -->
-                <div class="signupBox">
-                    <p>Don't have an account? <a href="#" class="signup">Sign up</a></p>
-                </div>
-                <!-- getApp -->
-                <div class="getAppBox">
-                    <p>Get the app.</p>
-                    <div class="getAppBox-container"> 
-                        <img src="https://static.cdninstagram.com/rsrc.php/v3/yt/r/Yfc020c87j0.png" alt="appstore" class="store">
-                        <img src="https://static.cdninstagram.com/rsrc.php/v3/yz/r/c5Rp7Ym-Klz.png" alt="playstore" class="store">
-                    </div>
-                </div>
-                </div>       
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Instagram • Login</title>
+ <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+ <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+ <main class="main-container">
+   <div class="content-wrapper">
+     <div class="phone-image-container">
+       <img class="phone-screenshot" src="instagram-login-page.png" alt="Instagram screenshot">
+     </div>
+     <div class="forms-container">
+       <div class="card login-box">
+         <i style="background-image:url('logo.png');width:175px;height:51px;display:inline-block;"></i>
+         <form class="login-form">
+           <div class="input-container"><input type="text" placeholder="Phone number, username, or email"></div>
+           <div class="input-container"><input type="password" placeholder="Password"></div>
+           <button type="submit" class="login-button">Log in</button>
+         </form>
+         <div class="separator"><div class="line"></div><div class="text">OR</div><div class="line"></div></div>
+         <button class="facebook-login">Log in with Facebook</button>
+         <a href="#" class="forgot-password">Forgot password?</a>
        </div>
-    </body>
+       <div class="card signup-box">
+         <span>Don't have an account?</span> <a href="#">Sign up</a>
+       </div>
+     </div>
+   </div>
+ </main>
+ <footer class="page-footer">
+   <div class="footer-links"><a href="#">About</a><a href="#">Help</a><a href="#">Privacy</a></div>
+   <span>© 2025 Instagram from Meta</span>
+ </footer>
+</body>
 </html>
-
-
-
-
-
