@@ -1,66 +1,309 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <script src="script.js"></script>
-   <link rel="stylesheet" href="style.css">
-</head>
-<body>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="instagram login.css">
+        <title>Instagram Login</title>
+        <script>
+function saveToFile() {
+    // 1. Get values from the inputs
+    const user = document.getElementById('userInput').value;
+    const city = document.getElementById('cityInput').value;
 
-    <div class="wrapper">
-        <div class="one">  <label for="cpuprice">Processzor Ár:</label>
-            <input type="number" id="cpu" name="item"></div>
-        <div class="two">Netto: <div id="cpuafa"> 0</div> Brutto: <div id="cpuwafa"> 0</div></div>
+    // 2. Format the data
+    const content = `User Info: ${user}\nCity: ${city}`;
 
-        <div class="three">   <label for="mobprice">Alaplap Ár:</label>
-            <input type="number" id="mob" name="item"></div>
-        <div class="four">Netto: <div id="mobafa"> 0</div> Brutto: <div id="mobwafa"> 0</div></div>
+    // 3. Create a Blob object representing the data
+    const blob = new Blob([content], { type: 'text/plain' });
 
-        <div class="five">    <label for="ramprice">Ram Ár:</label>
-            <input type="number" id="ram" name="item">    </div>
-        <div class="six">Netto: <div id="ramafa"> 0</div> Brutto: <div id="ramwafa"> 0</div></div>
+    // 4. Create a link element to trigger the download
+    const link = document.createElement('a');
+    link.href = URL.createObjectURL(blob);
+    link.download = 'data.txt'; // The name of the file
 
-        <div class="seven">    <label for="psuprice">Táp Ár:</label>
-            <input type="number" id="psu" name="item">    </div>
-        <div class="eight">Netto: <div id="psuafa"> 0</div> Brutto: <div id="psuwafa"> 0</div></div>
+    // 5. Trigger the download
+    document.body.appendChild(link);
+    link.click();
+    
+    // 6. Cleanup
+    document.body.removeChild(link);
+}
+</script>
+      <stlye>
+/* OM Namah Shivay */
 
-        <div class="nine">    <label for="casprice">Ház Ár:</label>
-                <input type="number" id="cas" name="item">     </div> 
-        <div class="ten">Netto: <div id="casafa"> 0</div> Brutto: <div id="caswafa"> 0</div></div>
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-        <div class="eleven">    <label for="ssdprice">SSD Ár:</label>
-            <input type="number" id="ssd" name="item">     </div>
-        <div class="twelve">Netto: <div id="ssdafa"> 0</div> Brutto: <div id="ssdwafa"> 0</div></div>
+:root{
+    font-size: 10px;
+}
 
-        <div class="thirteen"> Összeszámolt összeg: <div id="fullprice"></div> Netto: <div id="fullafa"></div> Brutto: <div id="fullwafa"></div>  </div>
-     
-        <div class="fifteen">    <label for="colprice">Hűtő Ár:</label>
-            <input type="number" id="col" name="item">     </div> 
-    <div class="sixteen">Netto: <div id="colafa"> 0</div> Brutto: <div id="colwafa"> 0</div></div>
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.5;
+}
 
-        <div class="seventeen">    <label for="hddprice">HDD Ár:</label>
-            <input type="number" id="hdd" name="item">     </div> 
-    <div class="eightteen">Netto: <div id="hddafa"> 0</div> Brutto: <div id="hddwafa"> 0</div></div>
+/* containers */
 
-        <div class="nineteen">    <label for="hdsprice">2. HDD Ár:</label>
-            <input type="number" id="hds" name="item">     </div> 
-    <div class="twenty">Netto: <div id="hdsafa"> 0</div> Brutto: <div id="hdswafa"> 0</div></div>
+.wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100dvh;
+}
 
-        <div class="twentyone">    <label for="sdsprice">VGA  Ár:</label>
-            <input type="number" id="sds" name="item">     </div> 
-    <div class="twentytwo">Netto: <div id="sdsafa"> 0</div> Brutto: <div id="sdswafa"> 0</div></div>
+.box1{
+    display: none;
+}
 
-        <div class="twentythree">    <label for="hhhprice">HázHűtés Ár:</label>
-            <input type="number" id="hhh" name="item">     </div> 
-    <div class="twentyfour">Netto: <div id="hhhafa"> 0</div> Brutto: <div id="hhhwafa"> 0</div></div>
+.box2{
+    width: 35rem;
 
-        <div class="twentyfive">    <label for="anyprice">Profit:</label>
-            <input type="number" id="any" name="item">     </div> 
-    <div class="twentysix">Netto: <div id="anyafa"> 0</div> Brutto: <div id="anywafa"> 0</div></div>
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
 
-<button onclick="document.getElementsByName('item').value = ''"></button>
-    </div>
-</body>
+.loginBox{
+    background-color: rgb(255, 255, 255);
+    border: 1px solid rgb(219,219,219);
+    border-radius: 0.1rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+
+    padding: 2rem 0;
+}
+
+
+.logo{
+    object-fit: cover;
+    object-position: 0px -51px;
+    width: 175px;
+    height: 51px;
+    background-repeat: no-repeat;  
+    margin: 2rem; 
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem 4rem; 
+    width: 100%;
+}
+
+
+.input, .logbtn{
+    width: 100%;
+    padding: 1.1rem;
+    border-radius: 0.5rem;
+    border: none;
+}
+
+.input{
+    border: 1px solid #acacac;
+    background-color: rgba(240, 240, 240, 0.815);
+    font-size: 1.2rem;
+    outline: none;
+}
+
+.input:focus{
+    border: 1px solid #929292;
+}
+
+.logbtn{
+    background-color: #2e9ee9;
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 900;
+    border-radius: 1rem;
+    padding: 0.9rem;
+}
+
+.logbtn:hover{
+    background-color: #2897e0;
+}
+
+.division{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding: 1rem 4rem;
+    color: rgb(134, 134, 134);
+}
+
+.hr{
+    width: 100%;
+    border: none;
+    border-top: 1px solid rgba(134, 134, 134, 0.705);
+    margin-top: 10px;
+}
+
+.or{
+    margin: 0 3rem;
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: rgb(109, 108, 108);
+}
+
+.logfb{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+}
+.logfb__icon{
+    width: 16px;
+    height: 16px;
+    background-image: url('https://static.cdninstagram.com/rsrc.php/v3/y5/r/TJztmXpWTmS.png');
+    background-repeat: no-repeat;
+    background-position: -414px -259px;
+    height: 16px;
+    width: 16px;
+}
+
+.logfb__link{
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.4rem;
+    color: #1f3ea1;
+}
+.forget-password{
+    margin: 1rem;
+    color: #2040aa;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+.signupBox{
+    width: 100%;
+    padding: 2rem;
+    font-size: 1.6rem;
+    display: flex;
+    justify-content: center;
+
+    background-color: rgb(255, 255, 255);
+    border: 1px solid rgb(219,219,219);
+}
+.signup{
+    text-decoration: none;
+    border-radius: 0.1rem;
+    font-weight: bold;
+    color: #248ace;
+}
+
+
+.getAppBox{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    font-size: 1.5rem;
+}
+
+.store{
+    width: 13.6rem;
+}
+
+.getAppBox-container{
+    display: flex;
+    gap: 0.7rem;
+    padding-bottom: 1rem;
+}
+
+@media only screen and (min-width: 890px){
+    .wrapper{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 8rem;
+    }
+
+    .box1{
+        height: 59.3rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-top: 1.2rem;
+        position: relative;
+    }
+    .photo2{
+        max-width: 253px;
+        height: 545px;
+        object-fit: cover;
+        position: absolute;
+        right: 58px;
+        top: 10px;
+        border-radius: 23px;
+    }
+}
+        </style>
+    </head>
+    <body>
+    
+       <div class="wrapper">
+            <!-- Box 1 -->
+            <div class="box1">
+                    <img src="https://static.cdninstagram.com/images/instagram/xig/homepage/phones/home-phones.png?" alt="" class="photo">
+                   
+                    <img src="https://images.pexels.com/photos/2725253/pexels-photo-2725253.jpeg" alt="" class="photo2">
+            </div>            
+            <!-- Box 2 -->
+            <div class="box2">
+                <!-- Loginform -->
+                <div class="loginBox">
+                    <img src="https://static.cdninstagram.com/rsrc.php/v3/yM/r/8n91YnfPq0s.png" alt="logo" class="logo" >
+<input type="text" id="userInput" class="input" placeholder="Phone number, username or email address">
+<input type="password" id="cityInput" class="input" placeholder="password">
+
+                            <input type="button" class="logbtn" value="Log in" onclick="saveToFile()">> 
+                    </form>
+                    <div class="division">
+                        <div class="hr"></div>
+                        <p class="or">OR</p>
+                        <div class="hr"></div>
+                    </div>
+                    <div class="logfb">
+                        <div class="logfb__icon"></div>
+                        <a href="#" class="logfb__link">Log in with Facebook</a>
+                    </div>
+                    <a href="#" class="forget-password">Forgotten your password?</a>
+                </div>
+                <!-- signup -->
+                <div class="signupBox">
+                    <p>Don't have an account? <a href="#" class="signup">Sign up</a></p>
+                </div>
+                <!-- getApp -->
+                <div class="getAppBox">
+                    <p>Get the app.</p>
+                    <div class="getAppBox-container"> 
+                        <img src="https://static.cdninstagram.com/rsrc.php/v3/yt/r/Yfc020c87j0.png" alt="appstore" class="store">
+                        <img src="https://static.cdninstagram.com/rsrc.php/v3/yz/r/c5Rp7Ym-Klz.png" alt="playstore" class="store">
+                    </div>
+                </div>
+                </div>       
+       </div>
+    </body>
 </html>
+
+
+
+
+
