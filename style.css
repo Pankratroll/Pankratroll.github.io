@@ -1,150 +1,221 @@
-.thirteen {
-    border-style: solid;
-    padding: 10px;
-    line-height: 30px;
-}
-#fullafa, #fullwafa, #fullprice{
-    text-align: center;
-    background-color: rgba(226, 123, 163, 0.247);
-}
-input {
-    font-size:24px;
-    display: block;
-    width: 50%;
-    margin-left: 25%;
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-.wrapper {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    grid-gap: 10px;
-    grid-auto-rows: minmax(20px, auto);
-    font-size: 18px;
-    text-align: center;
-  }
-  .one {
-    background-color: rgba(205, 216, 216, 0.164);
-    grid-column: 1;
-    grid-row: 1;
-  }
-  .two {
-    grid-column: 2 / 2;
-    grid-row: 1 / 2;
-  }
-  .three {
-    background-color: rgba(205, 216, 216, 0.164);
-    grid-column: 1;
-    grid-row: 3;
-  }
-  .four {
-    background-color: rgba(87, 122, 199, 0.116);
-    grid-column: 2;
-    grid-row: 3;
-  }
-  .five {
-    background-color: rgba(205, 216, 216, 0.164);
-    grid-column: 1;
-    grid-row: 5;
-}
-.six {
-    grid-column: 2;
-    grid-row: 5;
-}
-.seven {
-    background-color: rgba(205, 216, 216, 0.164);
-    grid-column: 1;
-    grid-row: 7;
-}
-.eight {
-    background-color: rgba(87, 122, 199, 0.116);
-    grid-column: 2;
-    grid-row: 7;
-}
-.nine {
-    background-color: rgba(205, 216, 216, 0.164);
-    grid-column: 1;
-    grid-row: 9;
-}
-.ten {
-    grid-column: 2;
-    grid-row: 9;
-}
-.eleven {
-    background-color: rgba(205, 216, 216, 0.164);
-    grid-column: 3;
-    grid-row: 1;
-}
-.twelve {
-    grid-column: 4;
-    grid-row: 1;
-}
-.fifteen {
-    background-color: rgba(205, 216, 216, 0.164);
-    grid-column: 3;
-    grid-row: 3;
-}
-.sixteen {
-    background-color: rgba(87, 122, 199, 0.116);
-    grid-column: 4;
-    grid-row: 3;
-}
-.seventeen {
-    background-color: rgba(205, 216, 216, 0.164);
-    grid-column: 3;
-    grid-row: 5;
-}
-.eightteen {
-    grid-column: 4;
-    grid-row: 5;
-}
-.nineteen {
-    background-color: rgba(205, 216, 216, 0.164);
-    grid-column: 3;
-    grid-row: 7;
-}
-.twenty {
-    background-color: rgba(87, 122, 199, 0.116);;
-    grid-column: 4;
-    grid-row: 7;
-}
-.twentyone {
-    background-color: rgba(205, 216, 216, 0.164);
-    grid-column: 3;
-    grid-row: 9;
-}
-.twentytwo {
-    grid-column: 4;
-    grid-row: 9;
-}
-.twentythree {
-    background-color: rgba(205, 216, 216, 0.164);
-    grid-column: 3;
-    grid-row: 10;
-}
-.twentyfour {
-    background-color: rgba(87, 122, 199, 0.116);
-    grid-column: 4;
-    grid-row: 10;
-}
-.twentyfive {
-    background-color: rgba(205, 216, 216, 0.164);
-    grid-column: 3;
-    grid-row: 11;
-}
-.twentysix {
-    grid-column: 4;
-    grid-row: 11;
+:root{
+    font-size: 10px;
 }
 
-.thirteen {
-    grid-column: 1;
-    grid-row: 11;
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.5;
 }
-.fourteen {
-    grid-column: 1;
-    grid-row: 11;
+
+/* containers */
+
+.wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100dvh;
 }
-.fourteen {
-    grid-column: 2;
-    grid-row: 11;
+
+.box1{
+    display: none;
+}
+
+.box2{
+    width: 35rem;
+
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.loginBox{
+    background-color: rgb(255, 255, 255);
+    border: 1px solid rgb(219,219,219);
+    border-radius: 0.1rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+
+    padding: 2rem 0;
+}
+
+
+.logo{
+    object-fit: cover;
+    object-position: 0px -51px;
+    width: 175px;
+    height: 51px;
+    background-repeat: no-repeat;  
+    margin: 2rem; 
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem 4rem; 
+    width: 100%;
+}
+
+
+.input, .logbtn{
+    width: 100%;
+    padding: 1.1rem;
+    border-radius: 0.5rem;
+    border: none;
+}
+
+.input{
+    border: 1px solid #acacac;
+    background-color: rgba(240, 240, 240, 0.815);
+    font-size: 1.2rem;
+    outline: none;
+}
+
+.input:focus{
+    border: 1px solid #929292;
+}
+
+.logbtn{
+    background-color: #2e9ee9;
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 900;
+    border-radius: 1rem;
+    padding: 0.9rem;
+}
+
+.logbtn:hover{
+    background-color: #2897e0;
+}
+
+.division{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding: 1rem 4rem;
+    color: rgb(134, 134, 134);
+}
+
+.hr{
+    width: 100%;
+    border: none;
+    border-top: 1px solid rgba(134, 134, 134, 0.705);
+    margin-top: 10px;
+}
+
+.or{
+    margin: 0 3rem;
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: rgb(109, 108, 108);
+}
+
+.logfb{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+}
+.logfb__icon{
+    width: 16px;
+    height: 16px;
+    background-image: url('https://static.cdninstagram.com/rsrc.php/v3/y5/r/TJztmXpWTmS.png');
+    background-repeat: no-repeat;
+    background-position: -414px -259px;
+    height: 16px;
+    width: 16px;
+}
+
+.logfb__link{
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.4rem;
+    color: #1f3ea1;
+}
+.forget-password{
+    margin: 1rem;
+    color: #2040aa;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+.signupBox{
+    width: 100%;
+    padding: 2rem;
+    font-size: 1.6rem;
+    display: flex;
+    justify-content: center;
+
+    background-color: rgb(255, 255, 255);
+    border: 1px solid rgb(219,219,219);
+}
+.signup{
+    text-decoration: none;
+    border-radius: 0.1rem;
+    font-weight: bold;
+    color: #248ace;
+}
+
+
+.getAppBox{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    font-size: 1.5rem;
+}
+
+.store{
+    width: 13.6rem;
+}
+
+.getAppBox-container{
+    display: flex;
+    gap: 0.7rem;
+    padding-bottom: 1rem;
+}
+
+@media only screen and (min-width: 890px){
+    .wrapper{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 8rem;
+    }
+
+    .box1{
+        height: 59.3rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-top: 1.2rem;
+        position: relative;
+    }
+    .photo2{
+        max-width: 253px;
+        height: 545px;
+        object-fit: cover;
+        position: absolute;
+        right: 58px;
+        top: 10px;
+        border-radius: 23px;
+    }
 }
